@@ -14,7 +14,207 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      certifications: {
+        Row: {
+          certification_name: string
+          created_at: string
+          credential_url: string | null
+          expiry_date: string | null
+          id: string
+          issue_date: string | null
+          issuing_organization: string | null
+          user_id: string
+        }
+        Insert: {
+          certification_name: string
+          created_at?: string
+          credential_url?: string | null
+          expiry_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization?: string | null
+          user_id: string
+        }
+        Update: {
+          certification_name?: string
+          created_at?: string
+          credential_url?: string | null
+          expiry_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      education: {
+        Row: {
+          created_at: string
+          degree: string
+          description: string | null
+          end_year: string | null
+          id: string
+          institution: string
+          start_year: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          degree: string
+          description?: string | null
+          end_year?: string | null
+          id?: string
+          institution: string
+          start_year?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          degree?: string
+          description?: string | null
+          end_year?: string | null
+          id?: string
+          institution?: string
+          start_year?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      languages: {
+        Row: {
+          created_at: string
+          id: string
+          language_name: string
+          proficiency_level: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          language_name: string
+          proficiency_level?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          language_name?: string
+          proficiency_level?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          github: string | null
+          id: string
+          linkedin: string | null
+          location: string | null
+          personal_summary: string | null
+          phone: string | null
+          tone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          github?: string | null
+          id?: string
+          linkedin?: string | null
+          location?: string | null
+          personal_summary?: string | null
+          phone?: string | null
+          tone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          github?: string | null
+          id?: string
+          linkedin?: string | null
+          location?: string | null
+          personal_summary?: string | null
+          phone?: string | null
+          tone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      skills: {
+        Row: {
+          category: string | null
+          created_at: string
+          id: string
+          proficiency_level: number | null
+          skill_name: string
+          user_id: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          id?: string
+          proficiency_level?: number | null
+          skill_name: string
+          user_id: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          id?: string
+          proficiency_level?: number | null
+          skill_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      work_experience: {
+        Row: {
+          company: string
+          created_at: string
+          end_date: string | null
+          id: string
+          job_title: string
+          location: string | null
+          responsibilities: string[] | null
+          start_date: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          end_date?: string | null
+          id?: string
+          job_title: string
+          location?: string | null
+          responsibilities?: string[] | null
+          start_date: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          end_date?: string | null
+          id?: string
+          job_title?: string
+          location?: string | null
+          responsibilities?: string[] | null
+          start_date?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
